@@ -5,12 +5,16 @@
 
 public class Bagger {
 
+    // Instance variables
     private String name;
     private boolean IsMinor;
     private int StartTime;
     private int BreakTime; 
+
+    // Static variable to count total number of Bagger instances
     public static int totalBaggers;
 
+    // Constructor
     Bagger(String name, boolean IsMinor, int StartTime, int BreakTime){
 
         this.name = name;
@@ -18,9 +22,11 @@ public class Bagger {
         this.StartTime = StartTime;
         this.BreakTime = BreakTime;
 
+        // Increment the total number of baggers whenever a new object is created
         totalBaggers++;
     }
 
+    // Getter methods
     public String getName(){
         return name; 
     }
